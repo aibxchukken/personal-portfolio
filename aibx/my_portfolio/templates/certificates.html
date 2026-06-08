@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+
+<section class="certificates">
+  <h1>Certificates</h1>
+
+  <div class="certificate-card">
+    <h3>Flutter Development Certificate</h3>
+
+    <p>Successfully completed Flutter Development Training.</p>
+
+    <!-- Only display image -->
+    <img src="{% static 'images/certificate.jpg' %}" alt="Certificate" />
+  </div>
+</section>
+
+{% endblock %}

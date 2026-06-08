@@ -1,0 +1,115 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIBX Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Background -->
+    <canvas id="bg"></canvas>
+
+    <!-- Overlay -->
+    <div class="nav-overlay"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+      <a href="#home" class="nav-logo">AIBX</a>
+
+      <!-- Hamburger button -->
+      <div class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'skills' %}">Skills</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'certificates' %}">Certificates</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <main id="home">{% block content %}{% endblock %}</main>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: Brand & Mini About -->
+        <div class="footer-col">
+          <h3 class="footer-logo">AIBX</h3>
+          <p class="footer-desc">
+            Computer Engineering student specializing in Python, Django, and
+            Flutter development.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links Navigation -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'skills' %}">Skills</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'certificates' %}">Certificates</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info Quick View -->
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul class="footer-info">
+            <li><i class="fa-solid fa-envelope"></i> kmcshibu3@gmail.com</li>
+            <li><i class="fa-solid fa-phone"></i> +91 8089500239</li>
+            <li><i class="fa-solid fa-location-dot"></i> Kerala, India</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Social Shortcuts -->
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/aibx.exe"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/918089500239"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:kmcshibu3@gmail.com" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Strip -->
+      <div class="footer-bottom">
+        <p>© 2026 AIBX Portfolio. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

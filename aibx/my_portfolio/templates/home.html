@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            Welcome To My Portfolio
+        </span>
+
+        <h1>
+            Mohammed Aqib
+        </h1>
+
+        <h3>
+            Computer Engineering Student
+        </h3>
+
+        <p>
+            Python Developer • Django Developer • Flutter Developer
+            • Graphic Designer • Videographer • Photographer • Editor
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{% url 'projects' %}" class="btn-primary">
+                View Projects
+            </a>
+
+            <a href="{% url 'contact' %}" class="btn-secondary">
+                Contact Me
+            </a>
+
+        </div>
+
+        <div class="social-icons">
+
+            <a href="https://www.instagram.com/aibx.exe" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/918089500239" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="mailto:kmcshibu3@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="{% static 'images/IMG_6148.JPG.jpeg' %}"
+            alt="Mohammed Aqib"
+            class="profile-image"
+        >
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section class="about-section">
+
+    <h2>About Me</h2>
+
+    <div class="about-card">
+
+        <p>
+            I am a Diploma Computer Engineering student passionate about
+            Python, Django, Flutter, Web Development, Graphic Design,
+            Photography, and Videography.
+        </p>
+
+        <div class="about-details">
+
+            <div>
+                <strong>Location:</strong>
+                Vengara, Malappuram, Kerala, India
+            </div>
+
+            <div>
+                <strong>Languages:</strong>
+                English, Malayalam
+            </div>
+
+            <div>
+                <strong>Education:</strong>
+                Diploma in Computer Engineering
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PERSONAL DETAILS ================= -->
+
+<section id="personal" class="personal-details">
+
+    <h2>Personal Details</h2>
+
+<div class="details-grid">
+
+    <div class="detail-item">
+        <span class="label">Full Name</span>
+        <span class="value">Mohammed Aqib</span>
+    </div>
+
+    <div class="detail-item">
+        <span class="label">Qualification & Education</span>
+        <span class="value">Diploma in Computer Engineering Student</span>
+    </div>
+
+    <div class="detail-item">
+        <span class="label">Location</span>
+        <span class="value">Vengara, Malappuram, Kerala, India</span>
+    </div>
+
+    <div class="detail-item">
+        <span class="label">Languages</span>
+        <span class="value">English, Malayalam</span>
+    </div>
+
+    <div class="detail-item">
+        <span class="label">Interests</span>
+        <span class="value">
+            Design, Photography, Videography, Web Development
+        </span>
+    </div>
+
+    <!-- Added Hobbies -->
+    <div class="detail-item">
+        <span class="label">Hobbies</span>
+        <span class="value">
+            Coding, Video Editing, Gaming, Exploring New Tech
+        </span>
+    </div>
+
+</div>
+
+</section>
+
+{% endblock %}
